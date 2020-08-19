@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" ></script>
+<style>
+  .progress {
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative;
+  }
+  
+  .progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .progress>span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .progress .progress-left {
+    left: 0;
+  }
+  
+  .progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 6px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+  }
+  
+  .progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+  }
+  
+  .progress .progress-right {
+    right: 0;
+  }
+  
+  .progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+  }
+  
+  .progress .progress-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  
+  
+  .rounded-lg {
+    border-radius: 1rem;
+  }
+  
+  .text-gray {
+    color: #aaa;
+  }
+  
+  div.h4 {
+    line-height: 1rem;
+  }
+  
+</style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row">
+  
+     
+  
+          
+      <!--Progress bar 3 -->
+          <div class="progress mx-auto" data-value='40.18'>
+            <span class="progress-left">
+                          <span class="progress-bar border-success"></span>
+            </span>
+            <span class="progress-right">
+                          <span class="progress-bar " style="color: #f22b86;"></span>
+            </span>
+            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+              <div class="h2 font-weight-bold">3.2<sup class="small">%</sup></div>
+            </div>
+          </div>
+          <!-- END -->
+  
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+   
+    $(function() {
+
+      $(".progress").each(function() {
+    
+        var value = $(this).attr('data-value');
+        var left = $(this).find('.progress-left .progress-bar');
+        var right = $(this).find('.progress-right .progress-bar');
+    
+        if (value > 0) {
+          if (value <= 50) {
+            right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+          } else {
+            right.css('transform', 'rotate(180deg)')
+            left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+          }
+        }
+    
+      })
+    
+      function percentageToDegrees(percentage) {
+    
+        return percentage / 100 * 360
+    
+      }
+    
+    });
+    
+    </script>
+</body>
+
+
+</html>

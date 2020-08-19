@@ -1,0 +1,464 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanga Suba </title>
+    <link href="{%static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+     
+       li a:active {
+        color: yellow;
+
+      }
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 380px;
+            background: #1e2a3a;
+            color: #fff;
+            overflow-y: auto;}
+            .main-wrap{
+                margin-left: 380px;
+            }
+            
+                html {
+                  scroll-behavior: smooth;
+                }
+                body{
+                    background-color: #151e29 !important;
+                }
+                .main-wrap{
+                    max-width: fit-content !important;
+                    margin-left: 420px;
+                    margin-right: 100px;
+                }
+                
+                .navv-item a {
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: large;
+                    font-weight: bold;
+                    color: var(--mainText);
+                    display: block;
+                    padding: .5rem 1rem;
+                }
+
+                .main-wrap { 
+                    animation: fadeInAnimation ease 6s; 
+                    animation-iteration-count: 1; 
+                    animation-fill-mode: forwards; 
+                } 
+                @keyframes fadeInAnimation { 
+                    0% { 
+                        opacity: 0; 
+                    } 
+                    100% { 
+                        opacity: 1; 
+                    } 
+                } 
+                
+
+
+
+              .company   .progress {
+                    width: 100px;
+                    height: 100px;
+                    background: none;
+                    position: relative;
+                    background-color: #f22b86;
+    border-radius: 80px;
+                  }
+                  
+                  .company .progress::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    border: 6px solid #eee;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                  }
+                  
+                  .company .progress>span {
+                    width: 50%;
+                    height: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    z-index: 1;
+                  }
+                  
+                  .company .progress .progress-left {
+                    left: 0;
+                  }
+                  
+                  .company .progress .progress-bar {
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border-width: 6px;
+                    border-style: solid;
+                    position: absolute;
+                    top: 0;
+                  }
+                  
+                  .company .progress .progress-left .progress-bar {
+                    left: 100%;
+                    border-top-right-radius: 80px;
+                    border-bottom-right-radius: 80px;
+                    border-left: 0;
+                    -webkit-transform-origin: center left;
+                    transform-origin: center left;
+                  }
+                  
+                  .company .progress .progress-right {
+                    right: 0;
+                  }
+                  
+                  .company .progress .progress-right .progress-bar {
+                    left: -100%;
+                    border-top-left-radius: 80px;
+                    border-bottom-left-radius: 80px;
+                    border-right: 0;
+                    -webkit-transform-origin: center right;
+                    transform-origin: center right;
+                  }
+                  
+                  .company .progress .progress-value {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                  }
+                  
+                  
+                  
+                  .rounded-lg {
+                    border-radius: 1rem;
+                  }
+                  
+                  .text-gray {
+                    color: #aaa;
+                  }
+                  
+                  div.h4 {
+                    line-height: 1rem;
+                  }
+                  .p-lg-5{
+                  padding: 3rem !important;
+                }
+                .section-title {
+                  font-size: 2rem;
+                  position: relative;
+                  padding-left: 1.5rem;
+              }
+              .section-title:before {
+                content: "";
+                display: inline-block;
+                width: 5px;
+                height: 100%;
+                background: #54B689;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+                  div {
+                    transition:all 1s ease;
+                    
+                    /* Don't forget the vendor specific pre-fixes! */
+                }
+                
+                div:target {animation:animatezoom 0.8s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+                  
+    </style>
+</head>
+<body>
+    <header class="header text-center">	    
+		<div class="force-overflow">
+			<h1 class="pt-lg-4 mb-0"><a href="#" style="color: white;text-decoration: none;"">Thanga Suba</a></h1>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navigation" class="collapse navbar-collapse flex-column">
+                    <div  id="profile-wrapper">
+                        <img src="{%static 'images/suba.jpg'%}" id="profile-pic">  
+                        <hr>
+                        <p> Hi, I'm Thanga Suba!</p>
+                        <p class="mb-5">I am Software Developer in TCS. Welcome to my personal website!</p>
+                    </div>
+					<ul class="navbar-nav flex-column text-left">
+						<li class="navv-item">
+                            
+
+                            <a href="#aboutme" style="text-decoration: none;"> <i class="fa fa-user fa-fw mr-2"></i> About Me</a>
+                            <br>
+                            <a href="#experience" style="text-decoration: none;"> <i class="fa fa-tasks fa-fw mr-2"></i> Projects</a>
+                            <br>
+                            <a href="#skills" style="text-decoration: none;"> <i class="fa fa-briefcase   fa-fw mr-2"></i> Work Experience</a>
+                            <br>
+                            <a href="#goals" style="text-decoration: none;"> <i class="fa fa-hourglass fa-fw mr-2"></i> Goals</a>
+                            <br>
+                            <a href="#resume" style="text-decoration: none;"> <i class="fa fa-file fa-fw mr-2"></i> resume</a>
+						</li>
+						
+					
+				</div>
+			
+		</div><!--//force-overflow-->
+	</header>
+   
+      
+</header>
+
+    <div class="container main-wrap">
+        <br>
+        <div class="card  card-body h-100  text-white p-3 p-lg-5"   id="card-stylee" style=" background-color:black;font-size: 1.3rem; ">
+            <div class="card-block">
+                <div class="row" id="aboutme">
+                    <div class="col-8">
+                        <h4 class="name font-weight-bold mb-1">Thanga Suba</h4>
+                    <div class="tagline mb-3">System Engineer | Tata Consultancy Services</div>
+					
+					<p class="mb-4">Driven self-starter and fast learner and aspiring to become a Full Stack Developer always interested in learning and experiment new things in life.
+                     I'm having handson experience  in frontend and backend development for complex scalable web apps</p>
+
+						<ul class=" list-inline ">
+              <li class="list-inline-item"><span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x" style="color: #0077b5;;"></i>
+                <a href="https://www.linkedin.com/in/thanga-suba-n" class="social"> <i class="fa fa-linkedin fa-stack-1x" ></i></a>
+              </span></li> 
+                            <li class="list-inline-item"><span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x" style="color:  #4867aa ;;"></i>
+                                <a href="https://www.facebook.com/subasn.sn" class="social"> <i class="fa fa-facebook fa-stack-1x" ></i></a>
+                              </span></li> 
+                         <li class="list-inline-item"><span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x" style="color: #d46060;;"></i>
+                            <a href="https://www.instagram.com/suba_sn/" class="social"> <i class="fa fa-instagram fa-stack-1x" ></i></a>
+                          </span></li>   
+                          <li class="list-inline-item"><span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x" style="color: #38b8ff;;"></i>
+                            <a href="" class="social"> <i class="fa fa-twitter fa-stack-1x" ></i></a>
+                          </span></li>   
+                         
+                          
+                       
+                        
+					</ul>  
+                    </div>
+                    <div class="col-4">
+                     
+                            
+                               
+                             <ul class=" list-inline company" style="margin-top: 15px !important;">
+                                 <!--Progress bar 3 -->
+                              <li >    <h2 class="h5 font-weight-bold text-center mb-4">T-Factor</h2><div class="progress mx-auto" data-value='40.18'>
+                                <span class="progress-left">
+                                              <span class="progress-bar border-success"></span>
+                                </span> 
+                                <span class="progress-right">
+                                              <span class="progress-bar border-success" ></span>
+                                </span>
+                                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                  <div style="font-size: x-large;">32% </div>
+                                  <div><p></p></div>
+                                </div>
+                              </div>
+                              <!-- END -->
+                      </li>
+                              
+
+                                <li style="padding-top: 20px;
+                                padding-left: 100px;" ><span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: orange;;"></i>
+                                    <a href="#" class="social"> <i class="fa fa-phone fa-stack-1x" ></i></a>
+                                  </span><strong >9442344024  </strong></li>  
+                             <li style="
+                             padding-left: 100px;"  class="list-inline-item"><span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #4867aa;;"></i>
+                                <a href="mailto:thanga.suba@tcs.com" class="social"> <i class="fa fa-envelope fa-stack-1x" ></i></a>
+                              </span>thanga.suba@tcs.com</li>
+                                 
+                              
+                           
+                            
+                        </ul>
+                       <!--   <a class="btn btn-success ml-3" href=""> <i class="fas fa-file-pdf mr-2"></i> Download PDF Version</a>  --> 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        <br>
+        
+        <div class="row " >
+            <div class="col-md-12" style="font-size:1.3rem">
+                <div class="card card-body h-100  " id="card-stylee">
+                    <h4 class=" section-title mb-1" style="color: white;">Experience</h4>
+                    <div class="timeline" id="experience">
+                        <div class="tmln left">
+                          <div class="content">
+                            <h2>TNIGRS | 2017</h2>
+                            <h4>Tamil Nadu-Inspector General of Registrations and Stamps </h4>
+                            <li> Solely developed Asset and Printer Consumables standalone application and Integrated with IGRS
+                              BackOffice Application</li>
+                              <li> Automated sanity testing of citizen portal using selenium test suites</li>
+                                <li>Configuration and deployment of JBOSS server and deployed apps and maintained standalone
+                              applications.</li>
+                              <li> Involved in the full life cycle of software design process, including prototyping, proof of concepts,
+                              design, interface implementation, testing and maintenance<</li>
+                          </div>
+                          
+                        </div>
+                       
+                        <div class="tmln right">
+                          <div class="content">
+                            <h2>CCTNS |2016</h2>
+                            <h4>Crime and Criminal Tracking Network and Systems </h4>
+                        <li> Developed User Interface using Spring MVC and Evaluated and solved trouble tickets by coordinating
+                              with DBAs and Help Desk</li>
+                            <li> Used a hybridized AGILE/Waterfall method for development.</li>
+                          </div>
+                        </div>
+                      </div>
+                      
+                </div>
+            </div>
+            </div>
+            <br>
+            <div class="row" >
+            <div class="col-md-12">
+                <div class="card card-body h-100 text-white" id="card-stylee" style="line-height: 4rem;font-size: 1.3rem"> 
+                    <h4 class=" section-title mb-1" style="color: white;">What I Know</h4>
+                    <hr>
+					<div class="container">
+                        <div class="row" id="skills">
+                          
+                           <div class=" col-sm-6 content">
+                              <h4 class="text skillhead " style="color: #83ffae;background-color: #1e2a3a;">Work Experience</h4>
+                              <div class="row">
+                              <div class="col-4 ">
+                              <ul class="list-unstyled wrk-title">
+                                 <li> Languages</li>
+                                 <li> Framework </li>
+                                 <li>Front End </li>
+                                 <li>&nbsp;</li>
+                                 <li>Database </li>
+                                 <li>Server </li>
+                              </ul>
+                            </div>
+                            <div class="col-8 ">
+                                <ul class="list-unstyled wrk">
+                                   <li>  Java</li>
+                                   <li>  Spring- MVC</li>
+                                   <li>HTML 5, Javascript, Jquery, CSS, Bootstrap</li>
+                                   <li> MySQL, Postgres</li>
+                                   <li> JBoss,Apache Tomcat</li>
+                                </ul>
+                              </div>
+                            </div>
+                           </div>
+                           <div class="col-sm-1"></div>
+                           <div class="col-sm-5 content">
+                              <h4 class="text skillhead" style="color: #83ffae;">Self-Learnt</h4>
+                              <ul class="list-unstyled ">
+                                 <li>Python <div class="progress " style="width: 50%;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:70%"></div>
+                                  </div></li>
+                                 <li>Django
+                                    <div class="progress " style="width: 50%;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:60%"></div>
+                                      </div>
+                                 </li>
+                                 <li>Node-js
+                                    <div class="progress " style="width: 50%;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:5%"></div>
+                                      </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <div class="row" id="goals" style="line-height: 3rem;font-size: 1.3rem">
+            <div class="col-md-6">
+                <div class="card card-body h-100 text-white" id="card-stylee" >
+                    <h4 class=" section-title mb-1" style="color: white;">How I Learn</h4>
+					<hr>
+					<p>Reverse Engineer & Build Ugly Prototypes First.</p>
+
+					<p>I can learn just about anything by having a final product to tear apart piece by piece. I break the code where I need to figure out why things work the way they do. Documentation is just a reference.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-body text-white" id="card-stylee">
+                    <h4 class=" section-title mb-1" style="color: white;"> My Short Term Goals</h4>
+				<hr>
+					<p>Aside from building small web projects I would love to enter a position where I can be part of a bigger team & learn from others with more experience than myself.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script  type="text/javascript">
+    $(function() {
+
+        $(".progress").each(function() {
+      
+          var value = $(this).attr('data-value');
+          var left = $(this).find('.progress-left .progress-bar');
+          var right = $(this).find('.progress-right .progress-bar');
+      
+          if (value > 0) {
+            if (value <= 50) {
+              right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+            } else {
+              right.css('transform', 'rotate(180deg)')
+              left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+            } 
+          }
+      
+        })
+      
+        function percentageToDegrees(percentage) {
+      
+          return percentage / 100 * 360
+      
+        }
+      
+      });
+</script>
+</body>
+</html>
+
+
+
